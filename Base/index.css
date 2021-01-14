@@ -1,24 +1,35 @@
 body {
   background-color:#2d3436;
 }
+span{
+    color : white;
+}
 .btn {
   cursor: pointer;
 }
 h1 {
-  color: #34495e;
+  color: white;
   transition: color 0.5s ease-in-out;
 }
 .clicked {
   color: #7f8c8d;
 }
 
+
 .form,
 .greetings {
   display: none;
+  color : white;
 }
 
 .showing {
   display: block;
+  color : white;
+}
+
+.liShowing{
+    /* list-style: none; */
+    color : white;
 }
 
 @keyframes fadeIn{

@@ -2,6 +2,8 @@
 const toDoForm = document.querySelector(".js-toDoForm"),
     toDoInput = toDoForm.querySelector("input"),
     toDoList = document.querySelector(".js-toDoList");
+    
+    liShowing = "liShowing";
 
 // TODOS_LS = localStorage에 키값
 // toDos는 TODOS_LS 키값에 해당하는 object array 
@@ -44,9 +46,10 @@ function printToDo(text){
 
     delBtn.innerText = "❌";
     delBtn.addEventListener("click",deleteToDo);
-    span.innerText = text;
+    span.innerText = '  ' + text;
     li.appendChild(delBtn);
     li.appendChild(span);
+    li.classList.add(liShowing);
     li.id = newId; 
     toDoList.appendChild(li);
     const toDoObj = {

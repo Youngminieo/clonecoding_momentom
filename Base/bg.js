@@ -15,7 +15,6 @@ function printImage(imgNumber){
 
 function init(){
     const randomNumber = genRandom();
-    console.log(randomNumber);
     printImage(randomNumber);
 }
 
