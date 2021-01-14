@@ -5,8 +5,25 @@ const toDoForm = document.querySelector(".js-toDoForm"),
 
 // TODOS_LS = localStorage에 키값
 // toDos는 TODOS_LS 키값에 해당하는 object array 
+// toDos는 const -> let 으로 변경됬다. deleteToDo()에서 값이 변경되기 때문
 const TODOS_LS = "toDos";
-const toDos = [];
+let toDos = [];
+
+// 이벤트.target = 이벤트가 발생한, 요소를 반환
+// 자식요소.parentNode = 자식요소의 부모 요소가 있으면 반환
+// 부모요소.removeChild(자식요소) =  부모요소의 해당 자식요소가 있으면 삭제
+// filter(실행함수) = foreach 처럼사용하는데, 내부함수에 해당하는 것들을 걸러주는 역할?
+function deleteToDo(event){
+    const btn = event.target;
+    const li = btn.parentNode;
+    
+    toDoList.removeChild(li);
+    const  cleanToDos = toDos.filter(function(toDo){
+        return toDo.id !== parseInt(li.id);
+    });
+    toDos = cleanToDos;
+    saveToDos();
+}
 
 function saveToDos(){
     localStorage.setItem(TODOS_LS,JSON.stringify(toDos));
@@ -17,6 +34,7 @@ function saveToDos(){
 // li 에 button과 span을 넣어주고, 마지막에 toDoList(html의 ul)에 넣어준다.
 // 우리가 할거는 localStorage에 TODOS_LS키에 해당하는 object객체배열을 통해, 투두리스트를 불러오는거다. (새로고침해도 그대로)
 // 이는, 매번, 추가되는 투두리스트가 추가될때마다 브라우저에만 보여주는게 아니라, localStorage에 배열에 추가된 정보를 계속 업데이트하는 식이여야한다.
+// btn에 이벤트리스터를 달아줬다.
 
 function printToDo(text){
     const li = document.createElement("li");
@@ -25,6 +43,7 @@ function printToDo(text){
     const newId = toDos.length + 1;
 
     delBtn.innerText = "❌";
+    delBtn.addEventListener("click",deleteToDo);
     span.innerText = text;
     li.appendChild(delBtn);
     li.appendChild(span);
