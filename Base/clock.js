@@ -12,7 +12,7 @@ function getTime() {
     const hours = date.getHours();
     const seconds = date.getSeconds();
 
-    clockTitle.innerText = `${hours < 10 ? `0${hours}` : hours} : ${minutes < 10 ? `0${minutes}` : minutes} : ${seconds < 10 ? `0${seconds}` : seconds}`;
+    clockTitle.innerText = `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
 }
 // init()이란 함수는, 시작은 getTime으로 정의한 대로 한번, 현재시간을 띄워준다.
 // 그 후로는, setInterval()을 통해, 특정 시간 이후에 반복적으로, 매개변수로 넘긴 함수를 재실행하면서, 현재 시간을 띄워주는것처럼 보이게한다.
