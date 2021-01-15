@@ -10,10 +10,11 @@
 
 ## 📝 Result
 
-![My Local](/uploads/1848994ad25765da30fa8ef3684c67bc/캡처.PNG)
+![My Local](./public/images/result.png)
 
-출처:  [무민은귀여워]
 
 ## 📝caution
 
 ### location-based builds may not work due to security issues. 😂
+
+> Test Link : http://wi.kdt-gitlab.elice.io/clonecoding_momentom 
