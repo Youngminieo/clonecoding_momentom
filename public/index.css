@@ -1,3 +1,4 @@
+/* Basic elements CSS */
 html,body{
     padding : 0px;
     margin : 0px;
@@ -18,26 +19,87 @@ h1 {
   color: white;
   transition: color 0.5s ease-in-out;
 }
+
+/* momentom-main CSS */
+#momentom-main{
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top : 350px;
+    text-align: center;
+}
+
+/* js-clock CSS */
+.js-clock h1{
+    font-size : 120px;
+    margin-bottom : 20px;
+    margin-top: 0px;
+}
 .clicked {
   color: #7f8c8d;
 }
 
+/* js-greeting CSS */
+.js-form input{
+  text-align : center;
+  margin-bottom : 60px;
+  font-weight: bold;
+  font-size : 20px;
+  
+}
+.js-greetings{
+    font-size : 30px;
+    margin-top : 0px;
+    animation : fadeIn 1s linear
+}
 .form,
 .greetings {
   display: none;
   color : white;
 }
-
 .showing {
   display: block;
   color : white;
 }
 
+/* js-todo-list CSS */
+.js-toDoForm input{
+  border : none;
+  border-bottom: 2px solid white;
+  background : transparent;
+  color : white;
+  height: 40px;
+  font-weight: bold;
+  font-size : 20px;
+  padding-left : 5px;
+  text-align : center;
+  animation : fadeIn 1s linear
+}
+.js-toDoForm input::placeholder{
+  color :white;
+  border : none;
+}
 .js-toDoList{
+    height : 200px;
     padding-left: 0px;
     text-align : left;
     font-size : 20px;
     font-weight: bold;
+    overflow:auto;
+}
+.js-toDoList::-webkit-scrollbar {
+    width: 10px;
+}
+.js-toDoList::-webkit-scrollbar-thumb {
+    background-color: #2f3542;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+}
+.js-toDoList::-webkit-scrollbar-track {
+    background-color: grey;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px white;
 }
 .liShowing{
     list-style: none;
@@ -54,6 +116,7 @@ h1 {
     color: #FFFFFF;
 }
 
+/* js-background CSS */
 @keyframes fadeIn{
     from{
         opacity: 0;
@@ -72,40 +135,14 @@ h1 {
     animation : fadeIn 1s linear;
 }
 
-#momentom-main{
-    display : flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top : 350px;
-    text-align: center;
-}
-
-.js-clock h1{
-    font-size : 150px;
-    margin-bottom : 20px;
-    margin-top: 0px;
-}
-
-.js-greetings{
-    font-size : 30px;
-    margin-top : 0px;
-}
-
-.js-toDoForm input{
-  border : none;
-  border-bottom: 2px solid white;
-  background : transparent;
-  color : white;
-  height: 40px;
+/* js-weather CSS */
+.bottom-weather{
   font-weight: bold;
   font-size : 20px;
-  padding-left : 5px;
-  text-align : center;
-}
-.js-toDoForm input::placeholder{
-  color :white;
-}
-.js-weather{
+  float: right;
   position: relative;
-  text-align : center;
+  margin-right : 20px;
+  animation : fadeIn 1s linear
+  /* text-align : right; */
 }
+
