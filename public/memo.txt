@@ -1,0 +1,97 @@
+<<자바스크립트>>
+
+[변수]
+- let = JS 변수선언, 변할 수 있는 값
+- const = JS 상수선언, 변하지 않는 값
+- var = JS에서,불과 3년전까지만해도, let,const 를 지원하지 않았었다. 모든 변수는 var로 사용했었다. let과 같이 변할 수 있는 값
+★ 특별한 이유가 아닌이상은, 변수는 const로 선언하자.
+
+[주석]
+- // = JS에서 한줄 주석처리. 이 부분은 JS가 코드로 인식하지 않음
+- /**/ = JS 전체 주석처리
+
+[데이터타입]
+- string = 텍스트
+- boolean = true/false 존재
+- float
+- number
+
+[변수작성법]
+- camel case = 예를들어, youngmin 이란 변수 => youngMin 이런식으로, 글자순서상 띄어쓰기가 필요한 부분은, 공백대신에 대분자로 표기해주는 방식
+
+[배열]
+- array = [] 안에 원하는 데이터(string,number,boolean,변수에 값 등)들을 담을 수 있다.
+- 인덱싱 = 배열안에 원소접근시, 인덱싱을 통해서 접근 array[0],array[1]...(이런식)
+* 배열은 순수히, 데이터를 나열해서 저장하는 느낌. 그래서, 내가 몇번째에 어떤 데이터가 있는지 기억못하면 접근하는데 불편
+
+[객체]
+- object = {} 안에 "키 : 값" 형태로 데이터를 구성한다. object 안에 object를 넣을수도있고, array도 넣을수도 있고 ,그외 string,number 등은 말할 것도 없다.
+* 여러개의 데이터가 한 객체안에서 정의되어야 할때는, ,(콤마)로 구분해준다.
+* const object = {} 일때, 원래 const 상수는 값을 변경할 수 없다. 그러나, object {} 안에 필드멤버들은, 변경이가능, 단지 object 자체를 변경하지 못하는 것 !
+* object안에 멤버를 접근할떄는, .(dot)을 이용한다.
+* 객체는, 그 객체안에서도, 성질을 의미하는 이름이 있기때문에, 객체안에 어떤 멤버들이 있는지 확인가능. 접근 편리
+
+==============================================
+
+[함수]
+- 인자(argument) = 함수호출시, 전달하는 형식
+- 매개변수 = 함수정의시, 매개변수 형식
+* JS는 데이터타입이 딱히 없으니, 이름만 정의 
+
+[출력]
+- '' = 싱글따옴표
+- "" = 쌍따옴표
+- ★ `` = 백틱 ( 예시 : `Hello ${변수값1} you are ${변수값2} years old`; )
+- JS에서 문자열 출력시에, 시존에 따옴표로 구분해서 출력하는 것보단, ``(백틱)을 사용하면, 좀 더 섹시한 문자열 표현 가능
+
+[JS DOM Function]
+- document = 연결된 HTML 문서를 가져와, 여러 기능을하는 함수를 가진 객체
+- document.getElementId("아이디") = "아이디"가 같은, 연결된 HTML 문서에서 해당, 요소를 가져와 반환해준다.
+
+★ DOM = Document Object Model
+- getElementById = gets only by ID
+- getElementsByClassName =  gets many elements by classname
+- querySelector gets = ONE element by any selector you want.
+
+★ JS는 단순히 HTML,CSS 요소를 바꾸기 위해 등장한것이 아니야 !
+어떤 "이벤트"에 대해 반응하기 위해서 등장했지 !
+
+[이벤트]
+- click
+- resize
+- submit
+- input
+- change
+- load
+- print.. 
+등등 정말 많음.
+
+★ 함수에 인자로 함수를 넘길때 => 함수이름() << X , 함수이름 << O
+- 함수이름() = 함수가 바로실행 하는 것
+- 함수이름 = 함수를 인자로 넘기겠다는 것일뿐, 바로 실행은 안됌 !
+
+console 객체에는 여러 키-값이 존재한다. 그중
+* console.log()
+* console.dir()
+
+[조건문 && 관련 연산자]
+- '===' = "값" 자체가 같냐 ?
+- '==' = "주소"가 같냐 ?
+
+- 형식
+if(condition1)
+    block3
+else if(condition2)
+    block3
+else
+    block3
+
+=================================================================
+
+물론 JS로 HTML 요소, CSS 스타일 등을 JS 에서 직접 제어할 수 있겠지만
+★ 앞으로, web을 다룸에 있어서, 
+HTML은 HTML로만 요소배치를 (갖다놓고)
+CSS 는 CSS에서 스타일을 (꾸미고)
+JS 는 JS 에서 이벤트 로직을 (조작한다.)
+하는 방식을 추구해야한다.
+
